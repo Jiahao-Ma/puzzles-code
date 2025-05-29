@@ -117,7 +117,7 @@ We use Habitat, ScanNet, ArkitScenes, and BlendedMVS to train model. Please refe
 ### Training
 Below are the commands to train **Spann3R** on the unified dataset of BlendMVS, Habitat, ScanNet, and ArkitScene, both **with** and **without** Puzzles augmentation. Adjust `--nproc_per_node`, `--nnodes`, and rendezvous settings (`--rdzv_*`) to match your cluster.
 
-#### 1. Train **with** Puzzles augmentation
+#### 1. Train *with Puzzles* augmentation
 This run enables Puzzles transforms in the training datasets to simulate novel viewpoints and increase diversity.
 ```bash
 srun torchrun \
@@ -171,7 +171,7 @@ srun torchrun \
     --test_dataset "Scannet(split='val', ROOT='./data/scannet/', resolution=224, num_seq=1, kf_every=10, seed=777, full_video=True, puzzle_augment=None)"
     --output_dir './output/blendmvs_habitat_scannet_arkit_with_puzzles' \
 ```
-#### 2. Train **without** Puzzles augmentation
+#### 2. Train *without Puzzles* augmentation
 This run disables all Puzzles transforms, using the same datasets and hyperparameters for a direct baseline comparison.
 
 ```bash
