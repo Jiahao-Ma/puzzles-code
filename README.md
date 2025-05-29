@@ -114,8 +114,6 @@ python Image2Clips.py --input examples/I2C/lamp.jpg --output examples/I2C --thre
 ### Datasets
 We use Habitat, ScanNet, ArkitScenes, and BlendedMVS to train model. Please refer to [data_preprocess.md](/docs/data_preprocess.md) for details on dataset preparation.
 
-Below are the commands to train **Spann3R** on the unified dataset of BlendMVS, Habitat, ScanNet, and ArkitScene, both **with** and **without** Puzzles augmentation. Adjust `--nproc_per_node`, `--nnodes`, and rendezvous settings (`--rdzv_*`) to match your cluster.
-
 ### Training
 Below are the commands to train **Spann3R** on the unified dataset of BlendMVS, Habitat, ScanNet, and ArkitScene, both **with** and **without** Puzzles augmentation. Adjust `--nproc_per_node`, `--nnodes`, and rendezvous settings (`--rdzv_*`) to match your cluster.
 
