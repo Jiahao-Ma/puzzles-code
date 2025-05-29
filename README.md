@@ -30,8 +30,6 @@ git clone https://github.com/Jiahao-Ma/puzzles-code.git
 cd puzzles-code
 ```
 
----
-
 ### 2.  Create conda environment
 
 ```bash
@@ -40,8 +38,6 @@ conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=
 
 pip install -r requirements.txt
 ```
-
----
 
 ### 3. Install Open3D (necessary)
 
@@ -53,8 +49,6 @@ pip install -r requirements.txt
 
     Follow the [Open3D headless rendering guide](https://www.open3d.org/html/tutorial/visualization/headless_rendering.html).
 
----
-
 ### 4. Build CUDA kernels for RoPE
 ```bash
 cd croco/models/curope/
@@ -62,7 +56,6 @@ python setup.py build_ext --inplace
 cd ../../../
 ```
 
----
 
 ### 5. Download the DUSt3R checkpoint
 ```bash
