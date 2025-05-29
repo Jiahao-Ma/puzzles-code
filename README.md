@@ -203,7 +203,7 @@ srun torchrun \
 - Customize `--output_dir` to organize your results.
 
 ### Evaluation
-Please use the following command to evaluate our model:
+Please use the following command to evaluate model:
 ```bash
 python eval.py --exp_path ./output/blendmvs_habitat_scannet_arkit_with_puzzles --exp_name ckpt --conf_thresh 0.0 \
                --ckpt checkpoint-last.pth # or checkpoint-best.pth
@@ -215,9 +215,9 @@ Our code, data preprocessing pipeline, and evaluation scripts are based on sever
 
 - [DUSt3R](https://github.com/naver/dust3r)
 - [Spann3R](https://hengyiwang.github.io/projects/spanner)
-- [MoGe](https://github.com/microsoft/MoGe)
 - [SLAM3R](https://github.com/PKU-VCL-3DV/SLAM3R)
 - [Fast3R](https://github.com/facebookresearch/fast3r)
+- [MoGe](https://github.com/microsoft/MoGe)
 
 We thank the authors for releasing their code!
 
