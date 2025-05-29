@@ -35,7 +35,7 @@ from croco.utils.misc import NativeScalerWithGradNormCount as NativeScaler
 
 def get_args_parser():
     parser = argparse.ArgumentParser('Spann3R training', add_help=False)
-    parser.add_argument('--model', default="Spann3R(dus3r_name='/scratch3/ma040/project/bkproject/spann3r_best_version/spann3r/checkpoints/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth', use_feat=False, mem_pos_enc=False)",
+    parser.add_argument('--model', default="Spann3R(dus3r_name='./checkpoints/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth', use_feat=False, mem_pos_enc=False)",
                         type=str, help="string containing the model to build")
     parser.add_argument('--pretrained', default=None, help='path of a starting checkpoint')
     
@@ -47,14 +47,10 @@ def get_args_parser():
 
     # Datasets
     parser.add_argument('--train_dataset', 
-                        # default= "10000 @ Co3d(split='train', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg='rand', transform=ColorJitter) + 10000 @ Co3d(split='train', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg='rand', transform=ColorJitter, use_comb=False) + 10000 @ BlendMVS(split='train', ROOT='./data/blendmvg', resolution=224) + 10000 @ Scannetpp(split='train', ROOT='./data/scannetpp', resolution=224, transform=ColorJitter) + 10000 @ habitat(split='train', ROOT='./data/habitat_5frame', resolution=224, transform=ColorJitter) + 10000 @ Scannet(split='train', ROOT='./data/scannet', resolution=224, transform=ColorJitter, max_thresh=50) + 10000 @ ArkitScene(split='train', ROOT='./data/arkit_lowres', resolution=224, transform=ColorJitter, max_thresh=100)",
-                        # default= "10000 @ BlendMVS(split='train', ROOT='/home/jiahao/Downloads/data/BlendedMVS', resolution=224)",
-                        default= "10000 @ Puzzles(split='train', ROOT='/scratch3/ma040/dataset/BlendedMVS/', resolution=224)",
+                        default= "10000 @ Co3d(split='train', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg='rand', transform=ColorJitter) + 10000 @ Co3d(split='train', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg='rand', transform=ColorJitter, use_comb=False) + 10000 @ BlendMVS(split='train', ROOT='./data/blendmvg', resolution=224) + 10000 @ Scannetpp(split='train', ROOT='./data/scannetpp', resolution=224, transform=ColorJitter) + 10000 @ habitat(split='train', ROOT='./data/habitat_5frame', resolution=224, transform=ColorJitter) + 10000 @ Scannet(split='train', ROOT='./data/scannet', resolution=224, transform=ColorJitter, max_thresh=50) + 10000 @ ArkitScene(split='train', ROOT='./data/arkit_lowres', resolution=224, transform=ColorJitter, max_thresh=100)",
                         required=False, type=str, help="training set")
     parser.add_argument('--test_dataset', 
-                        # default="Scannetpp(split='val', ROOT='./data/scannetpp', resolution=224, num_seq=1, kf_every=10, seed=777, full_video=True) + 1000 @ Co3d(split='test', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg=False, seed=777)", 
-                        default= "BlendMVS(split='val', ROOT='/scratch3/ma040/dataset/BlendedMVS/', resolution=224)",
-                        # default= "Puzzles(split='val', ROOT='/nas/home/ma040/datasets/BlenderMVS', resolution=224)",
+                        default="Scannetpp(split='val', ROOT='./data/scannetpp', resolution=224, num_seq=1, kf_every=10, seed=777, full_video=True) + 1000 @ Co3d(split='test', ROOT='./data/co3d_preprocessed_50', resolution=224, num_frames=5, mask_bg=False, seed=777)", 
                         type=str, help="testing set")
     
     parser.add_argument('--inpaint', default=False, action='store_true', help='use inpainting for data augmentation')
