@@ -224,5 +224,10 @@ We thank the authors for releasing their code!
 ## Citation
 If you find our code or paper useful for your research, please consider citing:
 ```bibtex
-    Cooming soon...
+    @article{ma2025puzzles,
+            title={Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction},
+            author={Ma, Jiahao and Wang, Lei and Ahmedt-Aristizabal, David and Nguyen, Chuong and others},
+            journal={arXiv preprint arXiv:2506.23863},
+            year={2025}
+            }
 ```
