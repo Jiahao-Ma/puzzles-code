@@ -1,6 +1,8 @@
 <div align="center">
 
-# Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction
+<h1 align="center"> Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction </h1>
+
+<h3 align="center"> NeurIPS 2025</h3>
 
 <a href="https://arxiv.org/abs/2506.23863"><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a>
 <a href='https://jiahao-ma.github.io/puzzles/'><img src='https://img.shields.io/badge/Project_Page-Website-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
@@ -16,8 +18,9 @@
 
 ## TODO List
 - [x] Release Image-to-Clips tutorial and demo.
-- [ ] Release Clips-to-Clips tutorial and demo.
+<!-- - [ ] Release Clips-to-Clips tutorial and demo. -->
 - [x] Release evaluation and training code.
+- [ ] Feedforward 3D reconstruction VGGT with Puzzles.
 
 ## Installation Guide
 Follow these steps to set up the **Puzzles** codebase on your system.
